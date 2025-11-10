@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 1;
+    width: 250px;
+}
+
+#controls {
+    display: flex;
+    flex-direction: row;  
+}
+
+button {
+    width: 50px;
+    height: 30px;
+}

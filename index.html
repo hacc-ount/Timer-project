@@ -8,14 +8,16 @@
 </head>
 <body>
     <div id="container">
-        <h2>Timer</h2>
+        <div class="job">A0000</div>
+        <div class="notes"><button>+</button></div>
+        <div class="printer">Name</div>
         <div id="display">
-            00:00:00:00
+            00:00:00
         </div>
         <div id="controls">
             <button id="startBtn" onClick="start()">Start</button>
-            <button id="stopBtn" onClick="stop()">Stop</button>
-            <button id="resetBtn" onClick="reset()">Reset</button>
+            <button id="stopBtn" onClick="pause()">Pause</button>
+            <!--<button id="resetBtn" onClick="reset()">Reset</button>-->
         </div>
     </div>
     <script src="./main.js"></script>

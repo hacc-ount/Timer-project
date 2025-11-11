@@ -12,20 +12,40 @@ body {
     align-items: center;
 }
 
-#container {
+#wrapper {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-basis: 1;
+    flex-direction: column;
     width: 80%;
 }
 
 #controls {
     display: flex;
-    flex-direction: row;  
 }
 
-button {
-    width: 50px;
-    height: 30px;
+#container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    background-color: red;
+}
+
+.job {
+    flex-grow: 1;
+}
+
+.notes {
+    flex-grow: 1;
+}
+
+.printer {
+    flex-grow: 1;
+}
+
+/* Log */
+
+#log {
+    width: 80%;
+    height: 200px;
+    margin-top: 20px;
+    background-color:hsl(208, 13%, 80%);
 }

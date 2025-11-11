@@ -7,17 +7,22 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div id="container">
-        <div class="job">A0000</div>
-        <div class="notes"><button>+</button></div>
-        <div class="printer">Name</div>
-        <div id="display">
-            00:00:00
+    <div id="wrapper">
+        <div id="container">
+            <div class="job">A0000</div>
+            <div class="notes"><button>+</button></div>
+            <div class="printer">Name</div>
+            <div id="display">
+                00:00:00
+            </div>
+            <div id="controls">
+                <button id="startBtn" onClick="start()">Start</button>
+                <button id="stopBtn" onClick="pause()">Pause</button>
+                <!--<button id="resetBtn" onClick="reset()">Reset</button>-->
+            </div>
         </div>
-        <div id="controls">
-            <button id="startBtn" onClick="start()">Start</button>
-            <button id="stopBtn" onClick="pause()">Pause</button>
-            <!--<button id="resetBtn" onClick="reset()">Reset</button>-->
+        <div id="log">
+
         </div>
     </div>
     <script src="./main.js"></script>

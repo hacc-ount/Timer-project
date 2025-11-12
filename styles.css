@@ -1,15 +1,22 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 html, body {
     height: 100vh;
+    
+}
+
+html {
+    font-size: 10px;
 }
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Inter", sans-serif;
 }
 
 #wrapper {
@@ -18,27 +25,110 @@ body {
     width: 80%;
 }
 
-#controls {
-    display: flex;
-}
-
 #container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 80%;
-    background-color: red;
 }
 
-.job {
-    flex-grow: 1;
+/* Page Titles */
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.notes {
-    flex-grow: 1;
+/* Cards */
+
+.card {
+    padding: 8px;
+    
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
 }
 
-.printer {
-    flex-grow: 1;
+/* Table */
+
+#jobtable {
+    font-size: 1.2rem;
+    background-color: #fff;
+    border-spacing: 0;
+}
+
+thead {
+    background-color: #eef2fb;
+}
+
+th {
+    padding: 4px 17px 4px 4px;
+    border-bottom: 1px solid #111;
+}
+
+td {
+    padding: 2px 5px 2px 5px;
+    border-right: 1px solid #ddd;
+}
+
+td:last-child {
+    border-right: none;
+}
+
+tr {
+    border-top: none;
+}
+
+a {
+    text-decoration: none;
+    color:hsl(205, 99%, 56%);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Table Timer */
+
+#display {
+    text-align: center;
+}
+
+/* Table Buttons */
+
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+button {
+    border: none;
+    border-radius: 1rem;
+    width: 7rem;
+}
+
+#startBtn {
+    background-color: hsl(106, 79%, 58%);
+}
+
+#startBtn:hover {
+    background-color: hsl(106, 79%, 75%);
+}
+
+#pauseBtn {
+    background-color: hsl(53, 91%, 60%);
+}
+
+#pauseBtn:hover {
+    background-color: hsl(53, 91%, 75%);
+}
+
+#finishBtn {
+    background-color: hsl(2, 91%, 60%);
+}
+
+#finishBtn:hover {
+    background-color: hsl(2, 91%, 75%);
 }
 
 /* Log */

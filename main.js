@@ -4,6 +4,8 @@ let startTime = 0;
 let elapsedTime = 0;
 let isRunning = false; //if the stopwatch is running, flip this to be true, if not then it will be false.
 
+const log = document.getElementById("log");
+
 function start() {
 
     if (!isRunning) {
@@ -22,6 +24,8 @@ function pause() {
         elapsedTime = Date.now() - startTime;
         isRunning = false;
     }
+
+    window.prompt("Please list reason for pausing:");
 
 }
 

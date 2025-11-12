@@ -8,8 +8,8 @@
 </head>
 <body>
     <div id="wrapper">
-        <div id="container">
-            <div class="job">A0000</div>
+        <div id="container" class="card">
+            <!--<div class="job">A0000</div>
             <div class="notes"><button>+</button></div>
             <div class="printer">Name</div>
             <div id="display">
@@ -18,8 +18,45 @@
             <div id="controls">
                 <button id="startBtn" onClick="start()">Start</button>
                 <button id="stopBtn" onClick="pause()">Pause</button>
-                <!--<button id="resetBtn" onClick="reset()">Reset</button>-->
-            </div>
+                <button id="resetBtn" onClick="reset()">Reset</button>
+            </div>-->
+            <div class="title">List of Jobs</div>
+            <table id="jobtable">
+                <thead>
+                    <tr>
+                        <th>Job Number</th>
+                        <th>Cat Code</th>
+                        <th>Description</th>
+                        <th>Description</th>
+                        <th>Colour/Logo</th>
+                        <th>Pro</th>
+                        <th>Rpt</th>
+                        <th>Qty</th>
+                        <th>Timer</th>
+                        <th>Controls</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A0000</td>
+                        <td><a href="">10000000</a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="display">00:00:00</td>
+                        <td id="controls">
+                            <button id="startBtn" onClick="start()">Start</button>
+                            <button id="pauseBtn" onClick="pause()">Pause</button>
+                            <!--<button id="resetBtn" onClick="reset()">Reset</button>-->
+                            <button id="finishBtn" onClick="finish()">Finish</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
         </div>
         <div id="log">
 

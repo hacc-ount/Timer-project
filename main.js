@@ -5,6 +5,9 @@ let elapsedTime = 0;
 let isRunning = false; //if the stopwatch is running, flip this to be true, if not then it will be false.
 
 const log = document.getElementById("log");
+let pauseData = "";
+let notesData = "";
+let finishData = "";
 
 function start() {
 
@@ -22,10 +25,16 @@ function pause() {
     if (isRunning) {
         clearInterval(timer);
         elapsedTime = Date.now() - startTime;
+
+        pauseData = window.prompt("Please list reason for pausing:");
+
+        let worldTime = new Date().toLocaleString();
+        let tempP = document.createElement("p");
+        tempP.textContent = `${worldTime} - Pause reason: ${pauseData}`;
+        log.appendChild(tempP);
+
         isRunning = false;
     }
-
-    window.prompt("Please list reason for pausing:");
 
 }
 
@@ -42,16 +51,18 @@ function update() {
     const currentTime = Date.now();
     elapsedTime = currentTime - startTime;
 
-    let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
-    let minutes = Math.floor(elapsedTime / (1000 * 60) % 60);
-    let seconds = Math.floor(elapsedTime / 1000 % 60);
-    let milliseconds = Math.floor(elapsedTime % 1000 / 10);
+    let timerHours = Math.floor(elapsedTime / (1000 * 60 * 60));
+    let timerMinutes = Math.floor(elapsedTime / (1000 * 60) % 60);
+    let timerSeconds = Math.floor(elapsedTime / 1000 % 60);
+    let timerMilliseconds = Math.floor(elapsedTime % 1000 / 10);
 
-    hours = String(hours).padStart(2, "0");
-    minutes = String(minutes).padStart(2, "0");
-    seconds = String(seconds).padStart(2, "0");
-    milliseconds = String(milliseconds).padStart(2, "0");
+    timerHours = String(timerHours).padStart(2, "0");
+    timerMinutes = String(timerMinutes).padStart(2, "0");
+    timerSeconds = String(timerSeconds).padStart(2, "0");
+    timerMilliseconds = String(timerMilliseconds).padStart(2, "0");
 
-    display.textContent = `${hours}:${minutes}:${seconds}`;
+    display.textContent = `${timerHours}:${timerMinutes}:${timerSeconds}`;
+
 }
+
 

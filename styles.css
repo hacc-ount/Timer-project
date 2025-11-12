@@ -22,7 +22,9 @@ body {
 #wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 80%;
+    z-index: 0;
 }
 
 #container {
@@ -138,7 +140,27 @@ button {
     height: 200px;
     padding: 8px;
     margin-top: 20px;
-    background-color: hsl(0, 10%, 92%);
     overflow: scroll;
+    background-color: hsl(0, 10%, 92%);
     font-size: 1.2rem;
+}
+
+/* Functions */
+
+.focusScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color:hsl(0, 0%, 0%); 
+    opacity: 20%;
+}
+
+#options {
+    width: 50%;
+    height: 40%;
+    background-color: red;
 }

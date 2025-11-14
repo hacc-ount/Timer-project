@@ -15,6 +15,8 @@ function start() {
         //if not running, start the stopwatch
         startTime = Date.now() - elapsedTime;
         timer = setInterval(update, 10);
+        display.classList.remove("animatePause");
+        display.classList.add("animateStart");
         isRunning = true;
     }
 
@@ -25,6 +27,9 @@ function pause() {
     if (isRunning) {
         clearInterval(timer);
         elapsedTime = Date.now() - startTime;
+
+        display.classList.remove("animateStart");
+        display.classList.add("animatePause");
 
         pauseData = window.prompt("Please list reason for pausing:");
 

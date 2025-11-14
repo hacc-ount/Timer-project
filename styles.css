@@ -133,6 +133,35 @@ button {
     background-color: hsl(2, 91%, 75%);
 }
 
+.animateStart {
+
+    animation-duration: 1s;
+    animation-name: animateStart;
+    animation-iteration-count: 1;
+    
+}
+
+@keyframes animateStart {
+    0% {
+        background-color: #fff;
+    }
+
+    50% {
+        background-color: hsl(106, 79%, 75%);
+    }
+
+    100% {
+        background-color: #fff;
+    }
+}
+
+.animatePause {
+
+    background-color: hsl(53, 91%, 75%);
+
+}
+
+
 /* Log */
 
 #log {
@@ -148,7 +177,7 @@ button {
 /* Functions */
 
 .focusScreen {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -162,6 +191,5 @@ button {
     width: 50%;
     height: 40%;
     padding: 20px;
-    background-color: hsl(0, 0%, 100%);
-    
+    background-color: hsl(0, 0%, 100%); 
 }

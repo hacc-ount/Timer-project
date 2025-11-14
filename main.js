@@ -31,12 +31,12 @@ function pause() {
         display.classList.remove("animateStart");
         display.classList.add("animatePause");
 
-        pauseData = window.prompt("Please list reason for pausing:");
+        /*pauseData = window.prompt("Please list reason for pausing:");
 
         let worldTime = new Date().toLocaleString();
         let tempP = document.createElement("p");
         tempP.textContent = `${worldTime} - Pause reason: ${pauseData}`;
-        log.appendChild(tempP);
+        log.appendChild(tempP);*/
 
         isRunning = false;
     }

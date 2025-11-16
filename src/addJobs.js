@@ -8,9 +8,16 @@ function addJobs() {
     let colors = a0000.color;
     let count = 0;
     for (const color of colors) {
-        count = count + 1;
+        let newRow = document.createElement("tr");
 
-        
+        for (count; count <= 8; count++) {
+            let newData = document.createElement("td");
+            newData.classList = `td${count}`;
+            newRow.appendChild(newData);
+        }
+
+        count = 0;
+        jobTable.appendChild(newRow);
     }
 
 }

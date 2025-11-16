@@ -13,5 +13,5 @@ pauseBtn.addEventListener("click", () => {
     pause();
 });
 
-consoleLog();
+//consoleLog();
 addJobs();

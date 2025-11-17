@@ -1,6 +1,7 @@
 import {start, pause} from "./src/display.js";
 import {consoleLog} from "./src/consoleLog";
-import {addJobs} from "./src/addJobs.js";
+import {addJob} from "./src/addJobs.js";
+import {a0000} from "./src/jobData.js"
 
 const startBtn = document.querySelector("#startBtn");
 const pauseBtn = document.querySelector("#pauseBtn");
@@ -13,5 +14,4 @@ pauseBtn.addEventListener("click", () => {
     pause();
 });
 
-//consoleLog();
-addJobs();
+addJob(a0000);

@@ -7,17 +7,34 @@ function addJob(job) {
     function addJobLine(job) {
 
         let colors = job.color;
-        let count = 0;
+        let rowCount = 0;
+        let columnCount = 0;
         for (const color of colors) {
             let newRow = document.createElement("tr");
-
-            for (count; count <= 8; count++) {
+            newRow.id = `tr${rowCount}`;
+            if (columnCount < 8) {
+            for (columnCount; columnCount <= 8; columnCount++) {
                 let newData = document.createElement("td");
-                newData.classList = `td${count}`;
+                newData.id = `td${columnCount}`;
                 newRow.appendChild(newData);
             }
+            } else if (columnCount > 8 && columnCount < 16) {
+            for (columnCount; columnCount <= 16; columnCount++) {
+                let newData = document.createElement("td");
+                newData.id = `td${columnCount}`;
+                newRow.appendChild(newData);
+            } 
+            } else if (columnCount > 16 && columnCount < 24) {
+                for (columnCount; columnCount <= 24; columnCount++) {
+                let newData = document.createElement("td");
+                newData.id = `td${columnCount}`;
+                newRow.appendChild(newData);
+            }
+            } else {
+                console.log("columnCount exceeds if statements");
+            }
 
-            count = 0;
+            rowCount++;
             jobTable.appendChild(newRow);
         }
 
@@ -34,26 +51,25 @@ function addJob(job) {
     
     function addJobData(job) {
 
-    const td0 = document.querySelector(".td0");
-    const td1 = document.querySelector(".td1");
-    const td2 = document.querySelector(".td2");
-    const td3 = document.querySelector(".td3");
-    const td4 = document.querySelector(".td4");
-    const td5 = document.querySelector(".td5");
-    const td6 = document.querySelector(".td6");
-    const td7 = document.querySelector(".td7");
-    const td8 = document.querySelector(".td8");
+    const td0 = document.querySelector("#td0");
+    const td1 = document.querySelector("#td1");
+    const td2 = document.querySelector("#td2");
+    const td3 = document.querySelector("#td3");
+    const td4 = document.querySelector("#td4");
+    const td5 = document.querySelector("#td5");
+    const td6 = document.querySelector("#td6");
+    const td7 = document.querySelector("#td7");
+    const td8 = document.querySelector("#td8");
 
     td0.textContent = job.id;
     td1.textContent = job.catagory;
-    td3.textContent = colors;
+    td3.textContent = job.color[0];
     td4.textContent = process;
 
     }
 
     addJobLine(job);
     addJobData(job);
-
 
 }
 

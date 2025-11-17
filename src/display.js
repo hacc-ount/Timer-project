@@ -1,10 +1,11 @@
-const display = document.querySelector("#display");
+const display1 = document.querySelector("#display");
+
 let timer = null 
 let startTime = 0;
 let elapsedTime = 0;
 let isRunning = false;
 
-function start() {
+function start(display) {
 
     if (!isRunning) {
         startTime = Date.now() - elapsedTime;
@@ -16,7 +17,7 @@ function start() {
 
 }
 
-function pause() {
+function pause(display) {
 
     if (isRunning) {
         clearInterval(timer);
@@ -47,4 +48,4 @@ function update() {
 
 }
 
-export {start, pause};
+export {start, pause, display1};

@@ -4,6 +4,7 @@ import {formatArray} from "./formatting/format.js";
 const jobTable = document.querySelector("#jobTable");
 
 function addJob(job) {
+    
     function addJobLine(job) {
 
         let colors = job.color;

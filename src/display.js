@@ -9,7 +9,7 @@ function start(disp) {
 
     if (!isRunning) {
         startTime = Date.now() - elapsedTime;
-        timer = setInterval(update, 10);
+        timer = setInterval(() => update(disp), 10);
         disp.classList.remove("animatePause"); //Removing CSS animation
         disp.classList.add("animateStart"); //Replacing CSS animation
         isRunning = true;
@@ -43,7 +43,6 @@ function update(disp) {
     timerMinutes = String(timerMinutes).padStart(2, "0");
     timerSeconds = String(timerSeconds).padStart(2, "0");
     timerMilliseconds = String(timerMilliseconds).padStart(2, "0");
-    console.log(disp);
     disp.textContent = `${timerHours}:${timerMinutes}:${timerSeconds}`;
 
 }

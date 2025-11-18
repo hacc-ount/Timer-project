@@ -4,17 +4,18 @@ import {a0000} from "./src/jobData.js"
 
 addJob(a0000);
 
-const test = document.querySelector('.display');
-console.log(test);
+const display = document.querySelector('.display');
 const startBtn = document.querySelector("#startBtn");
 const pauseBtn = document.querySelector("#pauseBtn");
+const selected = document.querySelectorAll('#td');
+
 
 startBtn.addEventListener("click", () => {
-    start(test);
+    start(display);
 });
 
 pauseBtn.addEventListener("click", () => {
-    pause(test);
+    pause(display);
 });
 
 

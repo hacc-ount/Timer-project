@@ -1,35 +1,35 @@
-const display1 = document.querySelector("#display");
+//const disp = document.querySelector(".display");
 
 let timer = null 
 let startTime = 0;
 let elapsedTime = 0;
 let isRunning = false;
 
-function start(display) {
+function start(disp) {
 
     if (!isRunning) {
         startTime = Date.now() - elapsedTime;
         timer = setInterval(update, 10);
-        display.classList.remove("animatePause"); //Removing CSS animation
-        display.classList.add("animateStart"); //Replacing CSS animation
+        disp.classList.remove("animatePause"); //Removing CSS animation
+        disp.classList.add("animateStart"); //Replacing CSS animation
         isRunning = true;
     }
 
 }
 
-function pause(display) {
+function pause(disp) {
 
     if (isRunning) {
         clearInterval(timer);
         elapsedTime = Date.now() - startTime;
-        display.classList.remove("animateStart"); //Removing CSS animation
-        display.classList.add("animatePause"); //Replacing CSS animation
+        disp.classList.remove("animateStart"); //Removing CSS animation
+        disp.classList.add("animatePause"); //Replacing CSS animation
         isRunning = false;
     }
 
 }
 
-function update() {
+function update(disp) {
 
     const currentTime = Date.now();
     elapsedTime = currentTime - startTime;
@@ -43,9 +43,9 @@ function update() {
     timerMinutes = String(timerMinutes).padStart(2, "0");
     timerSeconds = String(timerSeconds).padStart(2, "0");
     timerMilliseconds = String(timerMilliseconds).padStart(2, "0");
-
-    display.textContent = `${timerHours}:${timerMinutes}:${timerSeconds}`;
+    console.log(disp);
+    disp.textContent = `${timerHours}:${timerMinutes}:${timerSeconds}`;
 
 }
 
-export {start, pause, display1};
+export {start, pause};

@@ -44,6 +44,7 @@ function addJob(job) {
     //Colors
     const jobColor = job.color;
     let colors = formatArray(jobColor);
+
     //Process
     const jobProcess = job.process;
     let process = formatArray(jobProcess);
@@ -65,6 +66,9 @@ function addJob(job) {
     td1.textContent = job.catagory;
     td3.textContent = job.color[0];
     td4.textContent = process;
+    
+    td7.innerHTML = "00:00:00";
+    td7.classList = "display";
 
     }
 
